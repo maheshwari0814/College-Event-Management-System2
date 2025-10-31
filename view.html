@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Registrations - NRCM</title>
+<link rel="stylesheet" href="college.css">
+</head>
+<body>
+  <header>
+    <h1>Registered Students</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="view.html">View Registrations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view-container">
+      <h2>All Registered Participants</h2>
+      <table border="1" cellpadding="10">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Event</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable">
+          <!-- Data from Firebase will appear here -->
+        </tbody>
+      </table>
+      
+    </section>
+  </main>
+
+  <footer>
+    <center>&copy; 2025 NRCM College</center>
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <script>
+    // Firebase Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDy72PKH73uVD8VE9iC-g58yHmQIYlUld8",
+      authDomain: "college-event-management-cca69.firebaseapp.com",
+      databaseURL: "https://college-event-management-cca69-default-rtdb.firebaseio.com/",
+      projectId: "college-event-management-cca69",
+      storageBucket: "college-event-management-cca69.appspot.com",
+      messagingSenderId: "200279171351",
+      appId: "1:200279171351:web:165da6f529e773bfd95752"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    const tableBody = document.getElementById("dataTable");
+
+    database.ref("registrations").on("value", (snapshot) => {
+      tableBody.innerHTML = "";
+      snapshot.forEach((childSnapshot) => {
+        const data = childSnapshot.val();
+        const row = `<tr>
+                      <td>${data.name}</td>
+                      <td>${data.email}</td>
+                      <td>${data.department}</td>
+                      <td>${data.event}</td>
+                    </tr>`;
+        tableBody.innerHTML += row;
+      });
+    });
+  </script>
+</body>
+</html>

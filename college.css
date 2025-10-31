@@ -1,0 +1,286 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #004aad;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    background-color: #063362;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcb05;
+}
+
+/* Main content */
+main {
+    padding: 30px;
+    text-align: center;
+}
+/* 🌈 Stylish Footer with Icons */
+.footer {
+  background: linear-gradient(90deg, #004aad, #007bff);
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* 🔗 Social Icon Links */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Hover glow animation */
+.footer-links a:hover {
+  color: #ffdd57;
+  text-shadow: 0 0 8px #ffdd57, 0 0 15px #ffdd57;
+  transform: scale(1.2);
+}
+/* Registration Form Styling */
+.form-container {
+    width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #053364;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #053364;
+}
+footer {
+  background: linear-gradient(90deg,  #053364);
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Animate event card borders */
+.event-card {
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  border-color: #007bff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(69, 155, 246, 0.4);
+}
+
+/* Add glowing effect animation */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #007bff; }
+  50% { box-shadow: 0 0 20px #00ffea; }
+  100% { box-shadow: 0 0 10px #007bff; }
+}
+
+.event-card:hover {
+  animation: glow 1.5s infinite alternate;
+}
+/* 🌈 Navbar base style */
+.custom-navbar {
+  background: linear-gradient(90deg, #004aad, #007bff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🌀 Navbar hover animation for links */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* 🌟 Underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animate underline on hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Change text color on hover */
+.navbar-nav .nav-link:hover {
+  color: #ffdd57 !important;
+}
+
+/* Active link glow */
+.navbar-nav .nav-link.active {
+  color: #ffdd57 !important;
+}
+.add-participant {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.add-participant h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* 🎉 Event Card Styles */
+.event-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease;
+  cursor: pointer;
+}
+
+/* ✨ Hover effect — smooth glow, no disappearance */
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
+}
+
+/* Animation for entry */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading animations */
+.events-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff;
+  position: relative;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Add space below event section */
+.events-section {
+  padding-bottom: 100px; /* gives breathing room above footer */
+}
+
+/* Optional: make footer stick cleanly at bottom */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  margin-top: 50px; /* adds space above footer */
+}
+
